@@ -23,7 +23,7 @@ bot = new Discord.Client({
 console.log(process.pid);
 bot.on(`ready`, () => {
 	console.log(`${bot.user.username} ready!`)
-	bot.user.setActivity(`iloveyouverton | ${prefix}`, { type: "Playing", url: "https://www.twitch.tv/twitch" });
+	bot.user.setActivity(`iloveyouverton | ${prefix}`, { type: "Streaming", url: "https://www.twitch.tv/twitch" });
 });
 process.on('unhandledRejection', console.error);
 bot.login(process.env.token ? process.env.token : require("./config.json").token);
@@ -343,5 +343,3 @@ bot.on(`message`, (message) => {
   }
   //message.delete();
 });
-
-bot.login(process.env.BOT_TOKEN);
